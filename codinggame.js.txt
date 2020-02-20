@@ -1,0 +1,52 @@
+/**
+ * Auto-generated code below aims at helping you parse
+ * the standard input according to the problem statement.
+ **/
+
+var inputs = readline().split(' ');
+const W = parseInt(inputs[0]); // width of the building.
+const H = parseInt(inputs[1]); // height of the building.
+const N = parseInt(readline()); // maximum number of turns before game over.
+var inputs = readline().split(' ');
+const X0 = parseInt(inputs[0]);
+const Y0 = parseInt(inputs[1]);
+var x1 =0;
+var y1=0;
+var x2=W-1;
+var y2 = H-1;
+
+// game loop
+while (true) {
+    // console.log("BOMB dIR");
+      // console.log(inputs);
+    //console.log(W);
+    //  console.log(H);
+    //   console.log(N);
+    //      console.log(inputs);
+         // console.log(X0);
+        // console.log(Y0);
+    const bombDir = readline();
+       console.log('0 0');
+    if(bombDir == 'U') {
+        y2 = Y0-1;
+    } else if (bombDir == 'D') {
+        y1 = Y0+1;
+    }
+     if(bombDir == 'L') {
+        x2 = X0-1;
+    } else if (bombDir == 'R') {
+        x1 = X0+1;
+    }
+    x = x1+ (x2-x1) / 2;
+    y = y1+ (y2-y1) /2 ;
+    console.log('X0 Y0');
+    // the direction of the bombs from batman's current location (U, UR, R, DR, D, DL, L or UL)
+    // console.log("TEST"+bombDir);
+  
+    // Write an action using console.log()
+    // To debug: console.error('Debug messages...');
+    
+    
+    // the location of the next window Batman should jump to.
+   // console.log('2 5');
+}
